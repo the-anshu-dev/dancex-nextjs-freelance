@@ -25,8 +25,8 @@ export type ImageCardProps = {
 };
 
 export type Service = {
-    title: string;
-    subtitle: string;
-    img: string;
-    link: string;
-}
+  title: string;
+  subtitle: string;
+  img: string;
+  link: string;
+};

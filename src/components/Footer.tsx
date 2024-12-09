@@ -11,19 +11,19 @@ export default function Footer() {
       <Image
         src={"/footer_image.png"}
         alt="footer image"
-        className="absolute w-full h-full object-cover -z-10 opacity-50"
+        className="absolute -z-10 h-full w-full object-cover mix-blend-soft-light"
         width={1920}
         height={1080}
       />
       <Container>
-        <div className="p-10 grid grid-cols-10 gap-y-10">
-          <div className="col-span-10 md:col-span-8 grid grid-cols-2 sm:grid-cols-4">
+        <div className="grid grid-cols-10 gap-y-10 p-10">
+          <div className="col-span-10 grid grid-cols-2 sm:grid-cols-4 md:col-span-8">
             {Object.entries(footerLinks).map(([title, links], index) => (
               <div
                 key={index}
-                className="flex flex-col gap-4 max-sm:first:hidden max-sm:last:hidden min-w-fit"
+                className="flex min-w-fit flex-col gap-4 max-sm:first:hidden max-sm:last:hidden"
               >
-                <h3 className="text-xl font-semibold bg-background-gradient bg-clip-text text-transparent">
+                <h3 className="bg-background-gradient bg-clip-text text-xl font-semibold text-transparent">
                   {title}
                 </h3>
                 <ul>
@@ -38,8 +38,8 @@ export default function Footer() {
               </div>
             ))}
           </div>
-          <div className="col-span-10 md:col-span-2 gap-6">
-            <div className="flex-col gap-2 justify-start hidden md:flex">
+          <div className="col-span-10 gap-6 md:col-span-2">
+            <div className="hidden flex-col justify-start gap-2 md:flex">
               <Image
                 src={"/logo.png"}
                 alt="logo"
@@ -58,13 +58,13 @@ export default function Footer() {
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
               <div>
-                <form className="flex gap-2 w-full">
+                <form className="flex w-full gap-2">
                   <input
                     type="email"
                     placeholder="Enter Your Email Address"
-                    className="px-2 py-1 bg-white placeholder:text-xs"
+                    className="bg-white px-2 py-1 placeholder:text-xs"
                   />
-                  <button className="px-2 py-1 bg-white text-background text-xs font-semibold">
+                  <button className="bg-white px-2 py-1 text-xs font-semibold text-background">
                     Subscribe
                   </button>
                 </form>

@@ -326,9 +326,9 @@ export const footerLinks = {
       link: "/cookies",
     },
     {
-        name: "Legal Notice",
-        link: "/legal-notice",
-    }
+      name: "Legal Notice",
+      link: "/legal-notice",
+    },
   ],
   Information: [
     {

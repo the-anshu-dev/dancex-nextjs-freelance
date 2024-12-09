@@ -36,8 +36,8 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-:hover::-webkit-scrollbar-thumb{
-    display: block;
+:hover::-webkit-scrollbar-thumb {
+  display: block;
 }
 
 ::-webkit-scrollbar-thumb:hover {

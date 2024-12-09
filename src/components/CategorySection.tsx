@@ -9,13 +9,13 @@ export default function CategorySection({
 }) {
   return (
     <Container>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 px-2">
+      <div className="grid grid-cols-1 gap-8 px-2 md:grid-cols-4">
         {categories.map((category, index) => (
           <CategoryCard key={index} item={category} />
         ))}
       </div>
       <div>
-        <button className="bg-background-gradient px-8 py-2 rounded-full md:rounded-xl font-semibold text-lg my-16 mx-auto block">
+        <button className="mx-auto my-16 block rounded-full bg-background-gradient px-8 py-2 text-lg font-semibold md:rounded-xl">
           View all
         </button>
       </div>

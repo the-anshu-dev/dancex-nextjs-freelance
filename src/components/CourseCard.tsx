@@ -3,11 +3,11 @@ import Image from "next/image";
 
 export default function CourseCard({ course }: { course: Course }) {
   return (
-    <div className="p-4 sm:p-2 w-full">
-      <div className="w-full aspect-square">
+    <div className="w-full p-4 sm:p-2">
+      <div className="aspect-square w-full">
         <Image
           src={course.img}
-          className="w-full h-full object-cover object-center rounded-xl"
+          className="h-full w-full rounded-xl object-cover object-center"
           alt={course.title}
           width={400}
           height={600}
@@ -15,15 +15,15 @@ export default function CourseCard({ course }: { course: Course }) {
       </div>
       <div className="mt-4 py-2">
         <div>
-          <h3 className="text-xl text-ellipsis font-semibold bg-text-gradient bg-clip-text text-transparent overflow-hidden sm:text-nowrap text-wrap max-sm:line-clamp-2">
+          <h3 className="overflow-hidden text-ellipsis text-wrap bg-text-gradient bg-clip-text text-xl font-semibold text-transparent max-sm:line-clamp-2 sm:text-nowrap">
             {course.title}
           </h3>
-          <p className="sm:text-nowrap font-medium text-ellipsis overflow-hidden w-10/12 text-textSecondary max-sm:line-clamp-2">
+          <p className="w-10/12 overflow-hidden text-ellipsis font-medium text-textSecondary max-sm:line-clamp-2 sm:text-nowrap">
             {course.description}
           </p>
         </div>
-        <div className="flex justify-between items-center mt-4 flex-wrap">
-          <p className="font-semibold text-nowrap">Rs {course.price}</p>
+        <div className="mt-4 flex flex-wrap items-center justify-between">
+          <p className="text-nowrap font-semibold">Rs {course.price}</p>
           <p>{course?.rating && "⭐".repeat(course.rating)}</p>
         </div>
       </div>

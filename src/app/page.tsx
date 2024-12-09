@@ -6,7 +6,13 @@ import Gallery from "@/components/Gallery";
 import HeadingPrimary from "@/components/HeadingPrimary";
 import Search from "@/components/Search";
 import ServicesList from "@/components/ServicesList";
-import { categories, categoryList, courses, galleryImages, services } from "@/lib/server";
+import {
+  categories,
+  categoryList,
+  courses,
+  galleryImages,
+  services,
+} from "@/lib/server";
 
 export default function Home() {
   return (

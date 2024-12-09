@@ -8,7 +8,10 @@ export default function CategoryItem({ category }: { category: Category }) {
   const pathname = usePathname();
   const router = useRouter();
   return (
-    <button onClick={()=>router.push(category.link)} className="flex justify-center items-center gap-2">
+    <button
+      onClick={() => router.push(category.link)}
+      className="flex items-center justify-center gap-2"
+    >
       <div
         className={`w-8 rounded-md p-1 ${
           pathname === category.link
@@ -20,13 +23,15 @@ export default function CategoryItem({ category }: { category: Category }) {
           src={category.icon}
           alt={category.name}
           width={40}
-          className="w-full h-full object-cover object-center"
+          className="h-full w-full object-cover object-center"
           height={40}
         />
       </div>
       <span
-        className={`text-base font-poppins ${
-          pathname === category.link ? "text-primary" : "group-first:text-primary"
+        className={`font-poppins text-base ${
+          pathname === category.link
+            ? "text-primary"
+            : "group-first:text-primary"
         }`}
       >
         {category.name}

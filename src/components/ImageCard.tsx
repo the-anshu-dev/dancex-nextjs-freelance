@@ -8,18 +8,20 @@ export default function ImageCard({ card }: { card: ImageCardProps }) {
   const router = useRouter();
   return (
     <div
-      className="w-full aspect-[1/1.3] relative cursor-pointer overflow-hidden rounded-lg px-4 sm:px-2"
+      className="relative aspect-[1/1.3] w-full cursor-pointer overflow-hidden rounded-lg px-4 sm:px-2"
       onClick={() => router.push(card.link || "/")}
     >
       <Image
         src={card.img}
-        className="w-full h-full object-cover object-center rounded-lg"
+        className="h-full w-full rounded-lg object-cover object-center"
         alt={card.title}
         width={400}
         height={600}
       />
-      <div className="absolute w-full bg-image-gradient h-[90%] bottom-0"></div>
-      <h3 className="absolute bottom-5 left-1/2 -translate-x-1/2 text-nowrap font-semibold text-xl">{card.title}</h3>
+      <div className="absolute bottom-0 h-[90%] w-full bg-image-gradient"></div>
+      <h3 className="absolute bottom-5 left-1/2 -translate-x-1/2 text-nowrap text-xl font-semibold">
+        {card.title}
+      </h3>
     </div>
   );
 }
