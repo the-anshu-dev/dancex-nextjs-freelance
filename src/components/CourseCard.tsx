@@ -1,5 +1,6 @@
 import { Course } from "@/lib/types";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CourseCard({ course }: { course: Course }) {
   return (
@@ -15,9 +16,11 @@ export default function CourseCard({ course }: { course: Course }) {
       </div>
       <div className="mt-4 py-2">
         <div>
-          <h3 className="overflow-hidden text-ellipsis text-wrap bg-text-gradient bg-clip-text text-xl font-semibold text-transparent max-sm:line-clamp-2 sm:text-nowrap">
-            {course.title}
-          </h3>
+          <Link href={course.link}>
+            <h3 className="overflow-hidden text-ellipsis text-wrap bg-text-gradient bg-clip-text text-xl font-semibold text-transparent max-sm:line-clamp-2 sm:text-nowrap">
+              {course.title}
+            </h3>
+          </Link>
           <p className="w-10/12 overflow-hidden text-ellipsis font-medium text-textSecondary max-sm:line-clamp-2 sm:text-nowrap">
             {course.description}
           </p>

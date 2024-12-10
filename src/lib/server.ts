@@ -1,4 +1,11 @@
-import { Category, Course, ImageCardProps, Service } from "./types";
+import {
+  Category,
+  Course,
+  CustomerStory,
+  FAQ,
+  ImageCardProps,
+  Service,
+} from "./types";
 
 export const categories: Category[] = [
   {
@@ -232,24 +239,6 @@ export const services: Service[] = [
     img: "/course-3.jpg",
     link: "/service/online-classes",
   },
-  {
-    title: "Nutrition Plans",
-    subtitle: "Get a personalized nutrition plan",
-    img: "/course-1.jpg",
-    link: "/service/nutrition-plans",
-  },
-  {
-    title: "Workshops",
-    subtitle: "Join workshops",
-    img: "/course-2.jpg",
-    link: "/service/workshops",
-  },
-  {
-    title: "Events",
-    subtitle: "Join events",
-    img: "/course-3.jpg",
-    link: "/service/events",
-  },
 ];
 
 export const categoryList: ImageCardProps[] = [
@@ -354,4 +343,68 @@ export const gradientColors = [
   "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FF0A7F 100%)",
   "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #50F2F8 100%)",
   "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #60A5FA 100%)",
+];
+
+export const customerStrories: CustomerStory[] = [
+  {
+    img: "/profie-pic.jpg",
+    name: "Ronald Richards",
+    rating: 5,
+    review:
+      "I love the classes, they are so much fun and the instructors are amazing!",
+  },
+  {
+    img: "/profie-pic.jpg",
+    name: "Ronald Richards",
+    rating: 5,
+    review:
+      "I love the classes, they are so much fun and the instructors are amazing!",
+  },
+  {
+    img: "/profie-pic.jpg",
+    name: "Ronald Richards",
+    rating: 5,
+    review:
+      "I love the classes, they are so much fun and the instructors are amazing!",
+  },
+  {
+    img: "/profie-pic.jpg",
+    name: "Ronald Richards",
+    rating: 5,
+    review:
+      "I love the classes, they are so much fun and the instructors are amazing!",
+  },
+];
+
+export const faqs: FAQ[] = [
+  {
+    question: "How do I sign up for a class?",
+    answer:
+      "You can sign up for a class by visiting the classes page and clicking on the class you want to sign up for. You will be taken to a page where you can sign up for the class by entering your details and making a payment.",
+  },
+  {
+    question: "What if I miss a class?",
+    answer:
+      "If you miss a class, you can reschedule it for another time. You can do this by visiting the classes page and clicking on the class you want to reschedule. You will be taken to a page where you can reschedule the class for another time.",
+  },
+  {
+    question: "How do I cancel my subscription?",
+    answer:
+      "You can cancel your subscription by visiting the subscriptions page and clicking on the subscription you want to cancel. You will be taken to a page where you can cancel your subscription.",
+  },
+  {
+    question: "How do I contact customer support?",
+    answer:
+      "You can contact customer support by visiting the contact us page and filling out the contact form. You can also contact customer support by sending an email to support@dancex.in or by calling +91 1234567890.",
+  },
+  {
+    question: "How do I reset my password?",
+    answer:
+      "You can reset your password by visiting the forgot password page and entering your email address. You will receive an email with a link to reset your password.",
+  },
+  {
+    question: "How do I update my payment information?",
+    answer:
+      "You can update your payment information by visiting the payment information page and entering your new payment information. You will receive a confirmation email once your payment information has been updated.",
+  },
 ];

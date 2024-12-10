@@ -1,6 +1,7 @@
 import { ImageCardProps } from "@/lib/types";
 import CategoryCard from "./CategoryCard";
 import Container from "./Container";
+import Link from "next/link";
 
 export default function CategorySection({
   categories,
@@ -15,9 +16,12 @@ export default function CategorySection({
         ))}
       </div>
       <div>
-        <button className="mx-auto my-16 block rounded-full bg-background-gradient px-8 py-2 text-lg font-semibold md:rounded-xl">
+        <Link
+          href={"/categories"}
+          className="mx-auto my-16 block w-min text-nowrap rounded-full bg-background-gradient px-8 py-2 text-lg font-semibold md:rounded-xl"
+        >
           View all
-        </button>
+        </Link>
       </div>
     </Container>
   );

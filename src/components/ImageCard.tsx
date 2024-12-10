@@ -5,12 +5,8 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 export default function ImageCard({ card }: { card: ImageCardProps }) {
-  const router = useRouter();
   return (
-    <div
-      className="relative aspect-[1/1.3] w-full cursor-pointer overflow-hidden rounded-lg px-4 sm:px-2"
-      onClick={() => router.push(card.link || "/")}
-    >
+    <div className="relative aspect-[1/1.3] w-full cursor-pointer overflow-hidden rounded-lg px-4 sm:px-2">
       <Image
         src={card.img}
         className="h-full w-full rounded-lg object-cover object-center"

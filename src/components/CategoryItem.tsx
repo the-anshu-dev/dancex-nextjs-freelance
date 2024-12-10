@@ -2,14 +2,14 @@
 
 import { Category } from "@/lib/types";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function CategoryItem({ category }: { category: Category }) {
   const pathname = usePathname();
-  const router = useRouter();
   return (
-    <button
-      onClick={() => router.push(category.link)}
+    <Link
+      href={category.link}
       className="flex items-center justify-center gap-2"
     >
       <div
@@ -36,6 +36,6 @@ export default function CategoryItem({ category }: { category: Category }) {
       >
         {category.name}
       </span>
-    </button>
+    </Link>
   );
 }

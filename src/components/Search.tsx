@@ -10,7 +10,7 @@ export default function Search() {
             type="text"
             name="search"
             id="search"
-            className="w-full rounded-full border-2 border-slate-800 bg-foreground px-4 py-2 text-lg text-slate-100 placeholder:font-lato md:px-8 md:py-4"
+            className="w-full rounded-full border-2 border-slate-800 bg-foreground px-4 py-2 text-lg text-black/70 placeholder:font-lato focus:outline-none md:px-8 md:py-4"
             placeholder="Search Your Style"
           />
           <button

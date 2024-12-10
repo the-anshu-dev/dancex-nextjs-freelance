@@ -1,20 +1,17 @@
 import { Service } from "@/lib/types";
 import ServicesCard from "./ServicesCard";
+import Container from "./Container";
 
 export default function ServicesList({ services }: { services: Service[] }) {
   return (
-    <div className="overflow-auto">
-      <div
-        className="flex gap-4"
-        style={{
-          width: (services.length * 100) / 2 + "%",
-          transform: "translateX(-" + 100 / services.length / 2 + "%)",
-        }}
-      >
-        {services.map((service, index) => (
-          <ServicesCard key={index} service={service} />
-        ))}
+    <Container>
+      <div className="overflow-hidden">
+        <div className="grid -translate-x-[66%] grid-cols-[1fr,10fr,1fr] gap-4 md:-translate-x-1/4 md:grid-cols-[1fr,2fr,1fr]">
+          {services.map((service, index) => (
+            <ServicesCard key={index} service={service} />
+          ))}
+        </div>
       </div>
-    </div>
+    </Container>
   );
 }

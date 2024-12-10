@@ -30,3 +30,15 @@ export type Service = {
   img: string;
   link: string;
 };
+
+export type CustomerStory = {
+  img: string;
+  name: string;
+  rating: number;
+  review: string;
+};
+
+export type FAQ = {
+  question: string;
+  answer: string;
+};

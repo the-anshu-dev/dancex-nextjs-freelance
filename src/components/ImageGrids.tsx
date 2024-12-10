@@ -12,7 +12,7 @@ export default function ImageGrids({ images }: { images: string[] }) {
         {images.map((img, index) => (
           <div
             key={index}
-            className={`relative aspect-square w-full ${index % 5 === 0 && "row-span-2"}`}
+            className={`relative aspect-video w-full ${index % 5 === 0 && "row-span-2"}`}
           >
             <Image
               src={img}
