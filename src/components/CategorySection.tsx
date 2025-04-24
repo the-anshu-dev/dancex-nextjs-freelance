@@ -18,7 +18,7 @@ export default function CategorySection({
       <div>
         <Link
           href={"/categories"}
-          className="mx-auto my-16 block w-min text-nowrap rounded-full bg-background-gradient px-8 py-2 text-lg font-semibold md:rounded-xl"
+          className="mx-auto my-16 block w-min text-nowrap rounded-full bg-background-gradient px-10 py-2 text-lg font-semibold md:rounded-xl"
         >
           View all
         </Link>

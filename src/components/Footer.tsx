@@ -15,6 +15,10 @@ export default function Footer() {
         width={1920}
         height={1080}
       />
+      <div
+        className="absolute bg-black -z-10 h-full opacity-80 w-full object-cover mix-blend-soft-light"
+        
+      />
       <Container>
         <div className="grid grid-cols-10 gap-y-10 p-10">
           <div className="col-span-10 grid grid-cols-2 sm:grid-cols-4 md:col-span-8">

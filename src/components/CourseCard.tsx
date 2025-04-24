@@ -4,6 +4,8 @@ import Link from "next/link";
 
 export default function CourseCard({ course }: { course: Course }) {
   return (
+    <Link href={course.link}>
+
     <div className="w-full p-4 sm:p-2">
       <div className="aspect-square w-full">
         <Image
@@ -16,11 +18,11 @@ export default function CourseCard({ course }: { course: Course }) {
       </div>
       <div className="mt-4 py-2">
         <div>
-          <Link href={course.link}>
+          
             <h3 className="overflow-hidden text-ellipsis text-wrap bg-text-gradient bg-clip-text text-xl font-semibold text-transparent max-sm:line-clamp-2 sm:text-nowrap">
               {course.title}
             </h3>
-          </Link>
+          
           <p className="w-10/12 overflow-hidden text-ellipsis font-medium text-textSecondary max-sm:line-clamp-2 sm:text-nowrap">
             {course.description}
           </p>
@@ -31,5 +33,7 @@ export default function CourseCard({ course }: { course: Course }) {
         </div>
       </div>
     </div>
+    </Link>
+
   );
 }

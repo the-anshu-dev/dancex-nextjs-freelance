@@ -14,8 +14,8 @@ export default function CoursePage() {
   const { courseId } = useParams();
 
   return (
-    <div>
-      <div className="border-t-2 border-slate-800">
+    <div className="">
+      <div className=" p-14 py-8">
         <Container>
           <div className="md:px-8">
             <div className="mt-4 grid grid-cols-12 gap-x-3 gap-y-5">
@@ -25,12 +25,12 @@ export default function CoursePage() {
                 </span>{" "}
                 3BR w/ incredible views
               </h2>
-              <div className="order-5 col-span-12 text-center md:order-2 md:col-span-2">
+              <div className="order-5 flex justify-end col-span-12 text-center md:order-2 md:col-span-2">
                 <Link
                   href={"/course/" + courseId + "/viewall"}
-                  className="text-nowrap rounded-full bg-background-gradient px-8 py-2 text-lg font-semibold md:rounded-xl"
+                  className="text-nowrap rounded-full bg-background-gradient px-10 py-1 text-lg font-semibold md:rounded-xl"
                 >
-                  view all
+                  View all
                 </Link>
               </div>
               <div className="order-2 col-span-12 md:order-3 md:col-span-6">
@@ -79,7 +79,9 @@ export default function CoursePage() {
                 </div>
                 <div className="mt-4">
                   <p className="text-base">
-                    Hip-hop dance is a vibrant form of dance that combines a
+                  Hip-hop dance is a vibrant form of dance that combines a
+                    variety of freestyle movements to create a cultural piece of
+                    art.Hip-hop dance is a vibrant form of dance that combines a
                     variety of freestyle movements to create a cultural piece of
                     art.
                   </p>
@@ -165,7 +167,7 @@ export default function CoursePage() {
           </div>
         </Container>
       </div>
-      <div className="border-y-2 border-slate-800">
+      <div className="border-y-2 border-slate-800 p-14  py-0">
         <Container>
           <div className="space-y-6 md:p-8">
             <div className="flex items-center justify-start gap-4">
@@ -174,8 +176,8 @@ export default function CoursePage() {
                   src={"/profie-pic.jpg"}
                   alt="profile"
                   className="h-full w-full rounded-full object-cover"
-                  width={100}
-                  height={100}
+                  width={200}
+                  height={200}
                 />
               </div>
               <div>
@@ -199,7 +201,7 @@ export default function CoursePage() {
           </div>
         </Container>
       </div>
-      <div className="border-y-2 border-slate-800">
+      <div className="  p-14 py-0">
         <Container>
           <div className="pb-8 md:p-8">
             <div className="space-y-2 md:space-y-4">
@@ -214,7 +216,7 @@ export default function CoursePage() {
               </p>
             </div>
             <HeadingPrimary secondary="offer" primary="What This place offer">
-              <div className="mx-auto grid grid-cols-1 md:grid-cols-3 md:gap-y-8">
+              <div className="mx-auto   max-w-4xl grid grid-cols-1 md:grid-cols-3 md:gap-y-8">
                 {[
                   { img: "/zumba.png", title: "Classic dance" },
                   { img: "/zumba.png", title: "Modern dance" },
@@ -230,7 +232,7 @@ export default function CoursePage() {
                     key={index}
                     className="flex w-full items-center gap-4 px-8"
                   >
-                    <div className={`aspect-square size-20 rounded-md p-1`}>
+                    <div className={`aspect-square size-14 rounded-md bg-[#13184C] p-1`}>
                       <Image
                         src={item.img}
                         alt={""}
@@ -248,9 +250,9 @@ export default function CoursePage() {
               <div className="flex justify-center pt-16">
                 <Link
                   href={"/course/" + courseId + "/viewall"}
-                  className="text-nowrap rounded-full bg-background-gradient px-8 py-2 text-lg font-semibold md:rounded-xl"
+                  className="text-nowrap rounded-full bg-background-gradient px-10 py-1 text-lg font-semibold md:rounded-xl"
                 >
-                  view all
+                  View all
                 </Link>
               </div>
             </HeadingPrimary>

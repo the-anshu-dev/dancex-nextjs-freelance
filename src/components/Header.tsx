@@ -19,7 +19,7 @@ export default function Header() {
     "px-2 py-1 xs:px-4 xs:py-2 md:py-3 md:px-8 relative z-10 font-semibold font-poppins text-xs md:text-sm";
 
   return (
-    <header className="sticky top-0 z-50 bg-background shadow">
+    <header className="sticky top-0 z-50 bg-background shadow py-2">
       <Container>
         <div className="flex items-center justify-between gap-2 px-1 md:px-4">
           {/* logo */}
@@ -29,9 +29,8 @@ export default function Header() {
           >
             <Image
               src={"/logo.png"}
-              width={300}
-              className="h-full w-full object-contain object-center"
-              height={150}
+              width={192}
+              height={73}
               alt="logo"
             />
           </div>

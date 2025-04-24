@@ -28,7 +28,7 @@ export default function CategoryItem({ category }: { category: Category }) {
         />
       </div>
       <span
-        className={`font-poppins text-base ${
+        className={`font-poppins font-semibold text-base ${
           pathname === category.link
             ? "text-primary"
             : "group-first:text-primary"
