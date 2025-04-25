@@ -4,6 +4,7 @@ import {
   CustomerStory,
   FAQ,
   ImageCardProps,
+  REVIWE,
   Service,
 } from "./types";
 
@@ -408,3 +409,35 @@ export const faqs: FAQ[] = [
       "You can update your payment information by visiting the payment information page and entering your new payment information. You will receive a confirmation email once your payment information has been updated.",
   },
 ];
+
+
+export const review: REVIWE[] = [
+  {
+    id: 1, 
+    name: "Trevor Mitchell",
+    rating: 4,
+    review:
+      "“Ut tristique viverra sed porttitor senectus. A facilisis metus pretium ut habitant lorem. Velit vel bibendum eget aliquet sem nec, id sed. Tincidunt.”",
+    image: "/review.png", 
+  },
+  {
+    id: 2,
+    name: "Emily Carter",
+    rating: 5,
+    review:
+      "“Incredible experience! The instructors are talented and friendly. I've learned so much and feel more confident dancing now.”",
+      image: "/review.png", 
+    },
+  {
+    id: 3, 
+
+    name: "Jacob Lee",
+    rating: 4,
+    review:
+      "“Amazing classes and very easy to follow along. I love the community and the energy in every session.”",
+      image: "/review.png", 
+    },
+];
+
+
+

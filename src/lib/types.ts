@@ -42,3 +42,10 @@ export type FAQ = {
   question: string;
   answer: string;
 };
+export type REVIWE = {
+  id:number;
+  name: string;
+  rating: number;
+  review: string;
+  image: string;
+};

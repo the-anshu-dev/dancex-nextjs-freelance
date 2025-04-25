@@ -4,14 +4,22 @@ import Container from "@/components/Container";
 import FAQContainer from "@/components/FAQContainer";
 import HeadingPrimary from "@/components/HeadingPrimary";
 import ImageWithIcon from "@/components/ImageWithIcon";
+import ReviewContainer from "@/components/REVIEWContainer";
 import StoryCard from "@/components/StoryCard";
 import { customerStrories, faqs } from "@/lib/server";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+
+
 export default function CoursePage() {
   const { courseId } = useParams();
+  const videos = ["/profie-pic.jpg", "/profie-pic.jpg", "/profie-pic.jpg","/profie-pic.jpg","/profie-pic.jpg","/profie-pic.jpg","/profie-pic.jpg",];
 
   return (
     <div className="">
@@ -33,7 +41,7 @@ export default function CoursePage() {
                   View all
                 </Link>
               </div>
-              <div className="order-2 col-span-12 md:order-3 md:col-span-6">
+              <div className="order-2  col-span-12 md:order-3 md:col-span-6">
                 <ImageWithIcon
                   src="/image-1.png"
                   alt="image 1"
@@ -41,7 +49,7 @@ export default function CoursePage() {
                   iconAlt=""
                 />
               </div>
-              <div className="order-4 col-span-12 grid grid-cols-2 md:order-4 md:col-span-6">
+              <div className="order-4  col-span-12 grid grid-cols-2 md:order-4 md:col-span-6">
                 <ImageWithIcon
                   src="/image-2.jpg"
                   alt="image 2"
@@ -79,7 +87,7 @@ export default function CoursePage() {
                 </div>
                 <div className="mt-4">
                   <p className="text-base">
-                  Hip-hop dance is a vibrant form of dance that combines a
+                    Hip-hop dance is a vibrant form of dance that combines a
                     variety of freestyle movements to create a cultural piece of
                     art.Hip-hop dance is a vibrant form of dance that combines a
                     variety of freestyle movements to create a cultural piece of
@@ -158,7 +166,7 @@ export default function CoursePage() {
                 <Image
                   src={"/play-icon.svg"}
                   alt="play icon"
-                  className="absolute left-1/2 top-1/2 size-[20%] -translate-x-1/2 -translate-y-1/2 transform"
+                  className="absolute  left-1/2 top-1/2 size-[20%] -translate-x-1/2 -translate-y-1/2 transform"
                   width={100}
                   height={100}
                 />
@@ -209,10 +217,8 @@ export default function CoursePage() {
                 Meet your Artist
               </h4>
               <p className="text-sm md:text-xl">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry&apos;s standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
               </p>
             </div>
             <HeadingPrimary secondary="offer" primary="What This place offer">
@@ -263,7 +269,12 @@ export default function CoursePage() {
                 ))}
               </div>
             </HeadingPrimary>
-            <HeadingPrimary secondary="VIDEO" primary="Testimonial">
+
+            <HeadingPrimary secondary="Rating" primary="Reviews">
+              <ReviewContainer />
+            </HeadingPrimary>
+
+            {/* <HeadingPrimary secondary="VIDEO" primary="Testimonial">
               <div className="w-full overflow-hidden">
                 <div className="grid w-[125%] -translate-x-[20%] grid-cols-5 gap-2 overflow-hidden py-4 *:relative *:aspect-video *:h-full *:overflow-hidden *:rounded-md md:gap-4 md:py-16 *:md:rounded-xl">
                   <div className="col-span-2">
@@ -316,7 +327,48 @@ export default function CoursePage() {
                   </div>
                 </div>
               </div>
-            </HeadingPrimary>
+            </HeadingPrimary> */}
+
+<HeadingPrimary secondary="VIDEO" primary="Testimonial">
+      <div className="w-full overflow-hidden">
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          spaceBetween={16}
+          slidesPerView={1.2}
+          breakpoints={{
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 2.5 },
+          }}
+          className="!py-8"
+        >
+          {videos.map((src, index) => (
+            <SwiperSlide
+              key={index}
+              className="relative aspect-video h-full overflow-hidden rounded-md md:rounded-xl"
+            >
+              <Image
+                src={src}
+                alt={`video ${index + 1}`}
+                fill
+                className="object-cover opacity-70"
+              />
+              <Image
+                src="/play-icon.svg"
+                alt="play icon"
+                width={100}
+                height={100}
+                className="absolute left-1/2 top-1/2 size-[20%] -translate-x-1/2 -translate-y-1/2 transform"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </HeadingPrimary>
+
+
+
             <HeadingPrimary
               secondary="FAQ"
               primary="Frequently Asked Questions"
