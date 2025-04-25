@@ -4,7 +4,7 @@ import Container from "@/components/Container";
 import FAQContainer from "@/components/FAQContainer";
 import HeadingPrimary from "@/components/HeadingPrimary";
 import ImageWithIcon from "@/components/ImageWithIcon";
-import ReviewContainer from "@/components/REVIEWContainer";
+import ReviewContainer from "@/components/ReviewContainer";
 import StoryCard from "@/components/StoryCard";
 import { customerStrories, faqs } from "@/lib/server";
 import Image from "next/image";
@@ -19,11 +19,11 @@ import "swiper/css/pagination";
 
 export default function CoursePage() {
   const { courseId } = useParams();
-  const videos = ["/profie-pic.jpg", "/profie-pic.jpg", "/profie-pic.jpg","/profie-pic.jpg","/profie-pic.jpg","/profie-pic.jpg","/profie-pic.jpg",];
+  const videos = ["/profie-pic.jpg", "/profie-pic.jpg", "/profie-pic.jpg", "/profie-pic.jpg", "/profie-pic.jpg", "/profie-pic.jpg", "/profie-pic.jpg",];
 
   return (
-    <div className="">
-      <div className=" p-14 py-8">
+    <div className="px-5">
+      <div className="  py-8">
         <Container>
           <div className="md:px-8">
             <div className="mt-4 grid grid-cols-12 gap-x-3 gap-y-5">
@@ -33,7 +33,7 @@ export default function CoursePage() {
                 </span>{" "}
                 3BR w/ incredible views
               </h2>
-              <div className="order-5 flex justify-end col-span-12 text-center md:order-2 md:col-span-2">
+              <div className="order-5 flex  justify-center md:justify-end col-span-12 text-center md:order-2 md:col-span-2 py-2 ">
                 <Link
                   href={"/course/" + courseId + "/viewall"}
                   className="text-nowrap rounded-full bg-background-gradient px-10 py-1 text-lg font-semibold md:rounded-xl"
@@ -49,7 +49,7 @@ export default function CoursePage() {
                   iconAlt=""
                 />
               </div>
-              <div className="order-4  col-span-12 grid grid-cols-2 md:order-4 md:col-span-6">
+              <div className="order-4  col-span-12 grid grid-cols-2 md:order-4 md:col-span-6 ">
                 <ImageWithIcon
                   src="/image-2.jpg"
                   alt="image 2"
@@ -61,6 +61,7 @@ export default function CoursePage() {
                   alt="image 3"
                   iconSrc="/share icon.svg"
                   iconAlt=""
+
                 />
                 <ImageWithIcon
                   src="/image-4.jpg"
@@ -118,7 +119,7 @@ export default function CoursePage() {
                 <Image
                   src={"/play-icon.svg"}
                   alt="play icon"
-                  className="absolute left-1/2 top-1/2 size-[20%] -translate-x-1/2 -translate-y-1/2 transform"
+                  className="absolute left-1/2 top-1/2 size-[20%] -translate-x-1/2 -translate-y-1/2 transform  "
                   width={100}
                   height={100}
                 />
@@ -175,7 +176,7 @@ export default function CoursePage() {
           </div>
         </Container>
       </div>
-      <div className="border-y-2 border-slate-800 p-14  py-0">
+      <div className="md:border-y-2 md:border-slate-800   py-0">
         <Container>
           <div className="space-y-6 md:p-8">
             <div className="flex items-center justify-start gap-4">
@@ -209,11 +210,11 @@ export default function CoursePage() {
           </div>
         </Container>
       </div>
-      <div className="  p-14 py-0">
+      <div className="py-0">
         <Container>
           <div className="pb-8 md:p-8">
             <div className="space-y-2 md:space-y-4">
-              <h4 className="bg-background-gradient bg-clip-text text-xl font-semibold text-transparent md:text-3xl">
+              <h4 className="bg-background-gradient bg-clip-text mt-6 md:mt-0 text-xl font-semibold text-transparent md:text-3xl">
                 Meet your Artist
               </h4>
               <p className="text-sm md:text-xl">
@@ -222,7 +223,7 @@ export default function CoursePage() {
               </p>
             </div>
             <HeadingPrimary secondary="offer" primary="What This place offer">
-              <div className="mx-auto   max-w-4xl grid grid-cols-1 md:grid-cols-3 md:gap-y-8">
+              <div className=" mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-3 md:gap-y-8  gap-y-4  ">
                 {[
                   { img: "/zumba.png", title: "Classic dance" },
                   { img: "/zumba.png", title: "Modern dance" },
@@ -236,9 +237,9 @@ export default function CoursePage() {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className="flex w-full items-center gap-4 px-8"
+                    className="flex w-full items-center gap-4 md:px-8 px-10   "
                   >
-                    <div className={`aspect-square size-14 rounded-md bg-[#13184C] p-1`}>
+                    <div className={`aspect-square size-14 rounded-md bg-[#13184C] mx-2  p-1 `}>
                       <Image
                         src={item.img}
                         alt={""}
@@ -247,7 +248,7 @@ export default function CoursePage() {
                         height={100}
                       />
                     </div>
-                    <span className={`text-nowrap font-poppins text-xl`}>
+                    <span className={`text-nowrap mx-4 font-poppins text-xl`}>
                       {item.title}
                     </span>
                   </div>
@@ -261,117 +262,93 @@ export default function CoursePage() {
                   View all
                 </Link>
               </div>
+  
+
             </HeadingPrimary>
+
+
             <HeadingPrimary secondary="story" primary="Customer success story">
-              <div className="grid gap-4 px-8 sm:grid-cols-2 sm:p-0 md:grid-cols-4">
+              <Swiper
+                modules={[Autoplay]}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                spaceBetween={16}
+                slidesPerView="auto"
+                loop={true}
+                centeredSlides={true}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 2,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                  },
+                  1280: {
+                    slidesPerView: 4,
+                  },
+                }}
+              >
                 {customerStrories.map((story, index) => (
-                  <StoryCard key={index} story={story} />
+                  <SwiperSlide key={index}>
+                    <StoryCard story={story} />
+                  </SwiperSlide>
                 ))}
-              </div>
+              </Swiper>
             </HeadingPrimary>
 
             <HeadingPrimary secondary="Rating" primary="Reviews">
               <ReviewContainer />
             </HeadingPrimary>
 
-            {/* <HeadingPrimary secondary="VIDEO" primary="Testimonial">
-              <div className="w-full overflow-hidden">
-                <div className="grid w-[125%] -translate-x-[20%] grid-cols-5 gap-2 overflow-hidden py-4 *:relative *:aspect-video *:h-full *:overflow-hidden *:rounded-md md:gap-4 md:py-16 *:md:rounded-xl">
-                  <div className="col-span-2">
-                    <Image
-                      src="/profie-pic.jpg"
-                      alt="image 1"
-                      className="absolute h-full w-full object-cover opacity-70"
-                      width={400}
-                      height={400}
-                    />
-                    <Image
-                      src={"/play-icon.svg"}
-                      alt="play icon"
-                      className="absolute left-1/2 top-1/2 size-[20%] -translate-x-1/2 -translate-y-1/2 transform"
-                      width={100}
-                      height={100}
-                    />
-                  </div>
-                  <div className="col-start-3 col-end-5">
-                    <Image
-                      src="/profie-pic.jpg"
-                      alt="image 2"
-                      className="absolute h-full w-full object-cover opacity-70"
-                      width={400}
-                      height={400}
-                    />
-                    <Image
-                      src={"/play-icon.svg"}
-                      alt="play icon"
-                      className="absolute left-1/2 top-1/2 size-[20%] -translate-x-1/2 -translate-y-1/2 transform"
-                      width={100}
-                      height={100}
-                    />
-                  </div>
-                  <div>
-                    <Image
-                      src="/profie-pic.jpg"
-                      alt="image 3"
-                      className="absolute h-full w-full object-cover opacity-70"
-                      width={400}
-                      height={400}
-                    />
-                    <Image
-                      src={"/play-icon.svg"}
-                      alt="play icon"
-                      className="absolute left-1/2 top-1/2 size-[20%] -translate-x-1/2 -translate-y-1/2 transform"
-                      width={100}
-                      height={100}
-                    />
-                  </div>
-                </div>
-              </div>
-            </HeadingPrimary> */}
 
-<HeadingPrimary secondary="VIDEO" primary="Testimonial">
-      <div className="w-full overflow-hidden">
-        <Swiper
-          modules={[Autoplay, Pagination]}
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 2500, disableOnInteraction: false }}
-          spaceBetween={16}
-          slidesPerView={1.2}
-          breakpoints={{
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 2.5 },
-          }}
-          className="!py-8"
-        >
-          {videos.map((src, index) => (
-            <SwiperSlide
-              key={index}
-              className="relative aspect-video h-full overflow-hidden rounded-md md:rounded-xl"
-            >
-              <Image
-                src={src}
-                alt={`video ${index + 1}`}
-                fill
-                className="object-cover opacity-70"
-              />
-              <Image
-                src="/play-icon.svg"
-                alt="play icon"
-                width={100}
-                height={100}
-                className="absolute left-1/2 top-1/2 size-[20%] -translate-x-1/2 -translate-y-1/2 transform"
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-    </HeadingPrimary>
+            <HeadingPrimary secondary="VIDEO" primary="Testimonial">
+              <div className="w-full overflow-hidden">
+                <Swiper
+                  modules={[Autoplay]}
+                  autoplay={{ delay: 2500, disableOnInteraction: false }}
+                  spaceBetween={16}
+                  loop={true}
+                  slidesPerView={1.2}
+
+                  breakpoints={{
+                    768: { slidesPerView: 2 },
+                    1024: { slidesPerView: 2.5 },
+                  }}
+                  className="!py-8"
+                >
+
+
+                  {videos.map((src, index) => (
+                    <SwiperSlide
+                      key={index}
+                      className="relative aspect-video h-full overflow-hidden rounded-md md:rounded-xl"
+                    >
+                      <Image
+                        src={src}
+                        alt={`video ${index + 1}`}
+                        fill
+                        className="object-cover opacity-70"
+                      />
+                      <Image
+                        src="/play-icon.svg"
+                        alt="play icon"
+                        width={100}
+                        height={100}
+                        className="absolute left-1/2 top-1/2 size-[20%] -translate-x-1/2 -translate-y-1/2 transform"
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+            </HeadingPrimary>
 
 
 
             <HeadingPrimary
               secondary="FAQ"
-              primary="Frequently Asked Questions"
+              primary="Faq "
             >
               <FAQContainer faqs={faqs} />
             </HeadingPrimary>

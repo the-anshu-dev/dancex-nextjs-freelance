@@ -375,6 +375,27 @@ export const customerStrories: CustomerStory[] = [
     review:
       "I love the classes, they are so much fun and the instructors are amazing!",
   },
+  {
+    img: "/profie-pic.jpg",
+    name: "Ronald Richards",
+    rating: 5,
+    review:
+      "I love the classes, they are so much fun and the instructors are amazing!",
+  },
+  {
+    img: "/profie-pic.jpg",
+    name: "Ronald Richards",
+    rating: 5,
+    review:
+      "I love the classes, they are so much fun and the instructors are amazing!",
+  },
+  {
+    img: "/profie-pic.jpg",
+    name: "Ronald Richards",
+    rating: 5,
+    review:
+      "I love the classes, they are so much fun and the instructors are amazing!",
+  },
 ];
 
 export const faqs: FAQ[] = [
@@ -435,8 +456,8 @@ export const review: REVIWE[] = [
     rating: 4,
     review:
       "“Amazing classes and very easy to follow along. I love the community and the energy in every session.”",
-      image: "/review.png", 
-    },
+    image: "/review.png", 
+  },
 ];
 
 
