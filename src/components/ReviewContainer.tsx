@@ -14,7 +14,7 @@ const ReviewContainer = () => {
         <span key={i}>★</span>
       ))}
     </div>
-    <p className="text-gray-400 text-lg">2,256,896</p>
+    <p className="text-gray-400 text-2xl">2,256,896</p>
   </div>
 
   <div className="w-full max-w-xl space-y-4">
@@ -35,37 +35,38 @@ const ReviewContainer = () => {
   </div>
   </div>
   
-    <div className="flex 1 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 w-full">
+    <div className=" grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 w-full">
       {review.map((item) => (
-        <div
-          key={item.id}
-          className="border border-orange-400 bg-[#10153A] rounded-xl p-6  text-center"
-        >
-          <Image
-            src={item.image}
-            alt={item.name}
-            width={100}
-            height={100}
-            className="mx-auto rounded-full mb-4"
-          />
-          <h4 className="text-lg font-semibold">
-            <span className="text-[#F14E4E]">{item.name.split(" ")[0]}</span>{" "}
-            <span className="text-[#F79E1B]">{item.name.split(" ")[1]}</span>
-          </h4>
-          <div className="text-lg my-2">
-            {Array.from({ length: 5 }, (_, i) => (
-              <span
-                key={i}
-                className={
-                  i < item.rating ? "text-orange-400" : "text-gray-500"
-                }
-              >
-                ★
-              </span>
-            ))}
-          </div>
-          <p className="text-gray-300 text-sm">{item.review}</p>
-        </div>
+   <div
+   key={item.id}
+   className="border border-orange-400 bg-[#10153A] rounded-xl p-6 text-center"
+ >
+   <div className="w-40 h-40 mx-auto overflow-hidden rounded-full">
+     <Image
+       src={item.image}
+       alt={item.name}
+       width={160}
+       height={160}
+       className="object-cover w-full h-full"
+     />
+   </div>
+ 
+     <p className="text-2xl font-semibold mt-4 bg-gradient-to-r from-red-500 to-yellow-400 bg-clip-text text-transparent">{item.name} </p>
+ 
+   <div className="text-lg my-2">
+     {Array.from({ length: 5 }, (_, i) => (
+       <span
+         key={i}
+         className={i < item.rating ? "text-orange-400" : "text-gray-500"}
+       >
+         ★
+       </span>
+     ))}
+   </div>
+ 
+   <p className="text-gray-300 text-sm">{item.review}</p>
+ </div>
+ 
       ))}
     </div>
   </div>

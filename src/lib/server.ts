@@ -240,6 +240,60 @@ export const services: Service[] = [
     img: "/course-3.jpg",
     link: "/service/online-classes",
   },
+  {
+    title: "Personal Training",
+    subtitle: "Get a personalized workout plan",
+    img: "/course-1.jpg",
+    link: "/service/personal-training",
+  },
+  {
+    title: "Group Classes",
+    subtitle: "Join group classes",
+    img: "/course-2.jpg",
+    link: "/service/group-classes",
+  },
+  {
+    title: "Online Classes",
+    subtitle: "Join online classes",
+    img: "/course-3.jpg",
+    link: "/service/online-classes",
+  },
+  {
+    title: "Personal Training",
+    subtitle: "Get a personalized workout plan",
+    img: "/course-1.jpg",
+    link: "/service/personal-training",
+  },
+  {
+    title: "Group Classes",
+    subtitle: "Join group classes",
+    img: "/course-2.jpg",
+    link: "/service/group-classes",
+  },
+  {
+    title: "Online Classes",
+    subtitle: "Join online classes",
+    img: "/course-3.jpg",
+    link: "/service/online-classes",
+  },
+  {
+    title: "Personal Training",
+    subtitle: "Get a personalized workout plan",
+    img: "/course-1.jpg",
+    link: "/service/personal-training",
+  },
+  {
+    title: "Group Classes",
+    subtitle: "Join group classes",
+    img: "/course-2.jpg",
+    link: "/service/group-classes",
+  },
+  {
+    title: "Online Classes",
+    subtitle: "Join online classes",
+    img: "/course-3.jpg",
+    link: "/service/online-classes",
+  },
 ];
 
 export const categoryList: ImageCardProps[] = [
@@ -352,49 +406,49 @@ export const customerStrories: CustomerStory[] = [
     name: "Ronald Richards",
     rating: 5,
     review:
-      "I love the classes, they are so much fun and the instructors are amazing!",
+      "I love the classes, they are so much fun and the instructors are amazing!, I love the classes, they are so much fun and the instructors are amazing!",
+    },
+    {
+      img: "/profie-pic.jpg",
+      name: "Ronald Richards",
+      rating: 5,
+      review:
+      "I love the classes, they are so much fun and the instructors are amazing!, I love the classes, they are so much fun and the instructors are amazing!",
+    },
+    {
+      img: "/profie-pic.jpg",
+      name: "Ronald Richards",
+      rating: 5,
+      review:
+      "I love the classes, they are so much fun and the instructors are amazing!, I love the classes, they are so much fun and the instructors are amazing!",
+    },
+    {
+    img: "/profie-pic.jpg",
+    name: "Ronald Richards",
+    rating: 5,
+    review:
+    "I love the classes, they are so much fun and the instructors are amazing!, I love the classes, they are so much fun and the instructors are amazing!",
   },
   {
     img: "/profie-pic.jpg",
     name: "Ronald Richards",
     rating: 5,
     review:
-      "I love the classes, they are so much fun and the instructors are amazing!",
+    "I love the classes, they are so much fun and the instructors are amazing!, I love the classes, they are so much fun and the instructors are amazing!",
   },
   {
     img: "/profie-pic.jpg",
     name: "Ronald Richards",
     rating: 5,
     review:
-      "I love the classes, they are so much fun and the instructors are amazing!",
+    "I love the classes, they are so much fun and the instructors are amazing!, I love the classes, they are so much fun and the instructors are amazing!",
   },
   {
     img: "/profie-pic.jpg",
     name: "Ronald Richards",
     rating: 5,
     review:
-      "I love the classes, they are so much fun and the instructors are amazing!",
-  },
-  {
-    img: "/profie-pic.jpg",
-    name: "Ronald Richards",
-    rating: 5,
-    review:
-      "I love the classes, they are so much fun and the instructors are amazing!",
-  },
-  {
-    img: "/profie-pic.jpg",
-    name: "Ronald Richards",
-    rating: 5,
-    review:
-      "I love the classes, they are so much fun and the instructors are amazing!",
-  },
-  {
-    img: "/profie-pic.jpg",
-    name: "Ronald Richards",
-    rating: 5,
-    review:
-      "I love the classes, they are so much fun and the instructors are amazing!",
+    "I love the classes, they are so much fun and the instructors are amazing!, I love the classes, they are so much fun and the instructors are amazing!",
   },
 ];
 
@@ -462,3 +516,21 @@ export const review: REVIWE[] = [
 
 
 
+export const courseImage = [
+  {
+    id:1,
+    img:'/image-1.png'
+  },
+  {
+    id:1,
+    img:'/image-2.jpg'
+  },
+  {
+    id:1,
+    img:'/image-3.jpg'
+  },
+  {
+    id:1,
+    img:'/image-4.jpg'
+  },
+]

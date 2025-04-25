@@ -1,3 +1,4 @@
+'use client'
 import CategoryList from "@/components/CategoryList";
 import CategorySection from "@/components/CategorySection";
 import CoursesList from "@/components/CoursesList";

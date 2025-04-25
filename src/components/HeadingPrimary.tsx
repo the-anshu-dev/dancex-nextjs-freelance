@@ -9,7 +9,7 @@ export default function HeadingPrimary({
     <>
       <div className="mb-14 mt-20 flex flex-col items-center justify-center">
         {secondary && (
-          <h6 className="font-lato text-sm uppercase md:text-base">
+          <h6 className="font-lato text-sm uppercase md:text-base tracking-widest">
             {secondary}
           </h6>
         )}

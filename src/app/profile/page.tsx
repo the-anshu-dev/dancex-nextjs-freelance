@@ -6,16 +6,16 @@ import Image from "next/image";
 
 export default function ProfilePage() {
   const profile = {
-    name: "Musfiqur Rahman",
+    name: "Anshu Chaurasia",
     mainRole: "Dance Artist",
-    email: "musfiqur@gmail.com",
+    email: "anshudanX@gmail.com",
     profilePic: "/profie-pic.jpg",
     coverPic: "/cover-pic.jpg",
     noOfReviews: 5,
     noOfLikes: 10,
     noOfRating: 4,
     experience: 5,
-    location: "Dhaka, Bangladesh",
+    location: "Lucknow, Uttar Pradesh",
     danceForms: ["Hip Hop", "Belly Dance", "Salsa"],
     skills: [
       { img: "/image-1.png", title: "Dance" },
@@ -36,8 +36,8 @@ export default function ProfilePage() {
     ],
   };
   return (
-    <Container>
-      <div className="relative flex aspect-[1/0.4] w-full flex-col items-center justify-center gap-2 2xl:gap-6">
+    <>
+    <div className="relative flex aspect-[1/0.25] w-full flex-col items-center justify-center gap-2 2xl:gap-6">
         <Image
           src={profile.coverPic}
           alt="cover-pic"
@@ -52,15 +52,18 @@ export default function ProfilePage() {
           {profile.mainRole}
         </p>
       </div>
+
+    <Container>
+      
       <div className="grid grid-cols-12 py-[4vw] lg:px-10 lg:pb-20 lg:pt-12">
         <div className="relative col-span-5">
           <div className="absolute -top-[18vw] flex w-full flex-col items-center gap-4 lg:-top-[150%]">
-            <div className="relative aspect-square w-3/4 overflow-hidden rounded-full">
+            <div className="relative aspect-square w-2/4 overflow-hidden rounded-full">
               <Image
                 src={profile.profilePic}
                 alt="profile"
-                width={500}
-                height={500}
+                width={400}
+                height={400}
                 className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
@@ -74,14 +77,14 @@ export default function ProfilePage() {
             <Image
               src={"/review-icon.svg"}
               alt="review"
-              className="size-[8vw] lg:size-14"
+              className="size-[5vw] lg:size-14"
               width={20}
               height={20}
             />
-            <span className="bg-background-gradient bg-clip-text text-[3vw] font-bold text-transparent lg:text-2xl">
+            <span className="bg-background-gradient bg-clip-text text-[2vw] font-bold text-transparent lg:text-2xl">
               Reviews
             </span>
-            <span className="bg-background-gradient bg-clip-text text-[4vw] font-bold text-transparent lg:text-4xl">
+            <span className="bg-background-gradient bg-clip-text text-[3vw] font-bold text-transparent lg:text-4xl">
               {profile.noOfReviews}
             </span>
           </div>
@@ -89,14 +92,14 @@ export default function ProfilePage() {
             <Image
               src={"/like-icon.svg"}
               alt="like"
-              className="size-[8vw] lg:size-14"
+              className="size-[5vw] lg:size-14"
               width={20}
               height={20}
             />
-            <span className="bg-background-gradient bg-clip-text text-[3vw] font-bold text-transparent lg:text-2xl">
+            <span className="bg-background-gradient bg-clip-text text-[2vw] font-bold text-transparent lg:text-2xl">
               Likes
             </span>
-            <span className="bg-background-gradient bg-clip-text text-[4vw] font-bold text-transparent lg:text-4xl">
+            <span className="bg-background-gradient bg-clip-text text-[3vw] font-bold text-transparent lg:text-4xl">
               {profile.noOfLikes}
             </span>
           </div>
@@ -104,14 +107,14 @@ export default function ProfilePage() {
             <Image
               src={"/rating-icon.svg"}
               alt="rating"
-              className="size-[8vw] lg:size-14"
+              className="size-[5vw] lg:size-14"
               width={20}
               height={20}
             />
-            <span className="bg-background-gradient bg-clip-text text-[3vw] font-bold text-transparent lg:text-2xl">
+            <span className="bg-background-gradient bg-clip-text text-[2vw] font-bold text-transparent lg:text-2xl">
               Rating
             </span>
-            <span className="bg-background-gradient bg-clip-text text-[4vw] font-bold text-transparent lg:text-4xl">
+            <span className="bg-background-gradient bg-clip-text text-[3vw] font-bold text-transparent lg:text-4xl">
               {profile.noOfRating}
             </span>
           </div>
@@ -128,7 +131,7 @@ export default function ProfilePage() {
         </div>
       </div>
       <HeadingPrimary secondary="skills" primary="Skills">
-        <div className="flex justify-around">
+        <div className=" flex justify-between">
           {profile.skills.map((skill, index) => (
             <div className="p-2" key={index}>
               <CategoryCard item={skill} />
@@ -136,9 +139,14 @@ export default function ProfilePage() {
           ))}
         </div>
       </HeadingPrimary>
+      <div className="pb-10">
+
       <HeadingPrimary secondary="PICTURES" primary="Portfolio Pictures">
         <ImageGrids images={profile.portfolioPics} />
       </HeadingPrimary>
+      </div>
     </Container>
+    </>
+
   );
 }
