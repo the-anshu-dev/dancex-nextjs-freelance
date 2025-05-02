@@ -80,32 +80,32 @@ export default function CoursePage() {
                   iconAlt=""
                 />
               </div>
-              <div className="order-3 col-span-12 md:order-5 md:col-span-6">
+              <div className="order-3 col-span-12 md:order-5 md:col-span-6 mt-8">
                 <div className="flex items-start justify-between">
                   <div>
                     <h3 className="bg-background-gradient bg-clip-text text-3xl font-semibold text-transparent">
                       Hip-hop freestyle
                     </h3>
-                    <p className="text-xs text-secondary">Dubai UAE</p>
+                    <p className="text-xs mt-2 text-secondary">Dubai UAE</p>
                   </div>
                   <p className="hidden md:block">{"⭐".repeat(5)}</p>
                 </div>
-                <div className="mt-4">
-                  <p className="text-base">
-                    Hip-hop dance is a vibrant form of dance that combines a
-                    variety of freestyle movements to create a cultural piece of
-                    art.Hip-hop dance is a vibrant form of dance that combines a
-                    variety of freestyle movements to create a cultural piece of
-                    art.
+                <div className="mt-5">
+                  <p className="text-base ">
+                    Hip-hop dance is a vibrant form of dance that combines a variety of freestyle
+                    movements to create a cultural piece of art. Hip-hop dance is a vibrant form
+                    of dance that combines a variety of freestyle movements to create a cultural
+                    piece of art.
                   </p>
                 </div>
+
               </div>
-              <div className="order-6 col-span-12 flex items-center justify-center rounded-xl bg-[#FFF1E0] p-5 md:col-span-6">
-                <div className="flex flex-col items-center justify-center gap-5">
-                  <h4 className="text-4xl font-semibold text-black">
+              <div className="order-6 col-span-12 flex items-center justify-center rounded-xl md:h-[240px] h-[200px] md:mx-5  bg-[#FFF1E0] md:p-5 p-12  md:col-span-6">
+                <div className="flex flex-col items-center  text-center  gap-5 mx-6">
+                  <h4 className="md:text-5xl text-4xl item-center pb-4  font-semibold text-black">
                     Offer Price 50% Off
                   </h4>
-                  <button className="text-nowrap rounded-full bg-background-gradient px-8 py-2 text-lg font-semibold md:rounded-xl">
+                  <button className="text-nowrap  rounded-xl bg-background-gradient md:px-22 px-20  py-2 text-lg font-semibold md:rounded-xl">
                     Try Now
                   </button>
                 </div>
@@ -171,8 +171,8 @@ export default function CoursePage() {
       <div className="py-0">
         <Container>
           <div className="pb-8 md:p-8">
-            <div className="space-y-2 md:space-y-4 md:ps-4">
-              <h4 className="mt-6 bg-background-gradient bg-clip-text text-xl font-semibold text-transparent md:mt-0 md:text-3xl">
+            <div className="space-y-2 md:space-y-4 md:ps-4  md:mx-0 mx-4">
+              <h4 className="mt-6  bg-background-gradient bg-clip-text text-xl font-semibold text-transparent md:mt-0 md:text-3xl">
                 Meet your Artist
               </h4>
               <p className="text-sm md:text-xl">
@@ -183,7 +183,7 @@ export default function CoursePage() {
               </p>
             </div>
             <HeadingPrimary secondary="offer" primary="What This place offer">
-              <div className="mx-auto grid max-w-4xl grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-32 md:gap-y-10">
+              <div className=" md:mx- mx-20 grid max-w-4xl grid-cols-1  md:grid-cols-3 md:gap-32 md:gap-y-10">
                 {[
                   { img: "/zumba.png", title: "Classic dance" },
                   { img: "/zumba.png", title: "Modern dance" },
@@ -261,53 +261,53 @@ export default function CoursePage() {
             <HeadingPrimary secondary="Rating" primary="Reviews">
               <ReviewContainer />
             </HeadingPrimary>
-            </div>
-</Container>
-            <HeadingPrimary secondary="VIDEO" primary="Testimonial">
-              <div className="w-full overflow-hidden">
-                <Swiper
-                  modules={[Autoplay]}
-                  autoplay={{ delay: 2500, disableOnInteraction: false }}
-                  spaceBetween={16}
-                  loop={true}
-                  slidesPerView={1.2}
-                  breakpoints={{
-                    768: { slidesPerView: 2 },
-                    1024: { slidesPerView: 2.5 },
-                  }}
-                  className="!py-8"
+          </div>
+        </Container>
+        <HeadingPrimary secondary="VIDEO" primary="Testimonial">
+          <div className="w-full overflow-hidden">
+            <Swiper
+              modules={[Autoplay]}
+              autoplay={{ delay: 2500, disableOnInteraction: false }}
+              spaceBetween={16}
+              loop={true}
+              slidesPerView={1.2}
+              breakpoints={{
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 2.5 },
+              }}
+              className="!py-8"
+            >
+              {videos.map((src, index) => (
+                <SwiperSlide
+                  key={index}
+                  className="relative aspect-video h-full overflow-hidden rounded-md md:rounded-xl"
                 >
-                  {videos.map((src, index) => (
-                    <SwiperSlide
-                      key={index}
-                      className="relative aspect-video h-full overflow-hidden rounded-md md:rounded-xl"
-                    >
-                      <Image
-                        src={src}
-                        alt={`video ${index + 1}`}
-                        fill
-                        className="object-cover opacity-70"
-                      />
-                      <Image
-                        src="/play-icon.svg"
-                        alt="play icon"
-                        width={100}
-                        height={100}
-                        className="absolute left-1/2 top-1/2 size-[20%] -translate-x-1/2 -translate-y-1/2 transform"
-                      />
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </div>
-            </HeadingPrimary>
+                  <Image
+                    src={src}
+                    alt={`video ${index + 1}`}
+                    fill
+                    className="object-cover opacity-70"
+                  />
+                  <Image
+                    src="/play-icon.svg"
+                    alt="play icon"
+                    width={100}
+                    height={100}
+                    className="absolute left-1/2 top-1/2 size-[20%] -translate-x-1/2 -translate-y-1/2 transform"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </HeadingPrimary>
 
-<div className="pb-20">
+        <div className="pb-20">
 
-            <HeadingPrimary secondary="FAQ" primary="Frequently Asked Questions ">
-              <FAQContainer faqs={faqs} />
-            </HeadingPrimary>
-</div>
-          
+          <HeadingPrimary secondary="FAQ" primary="Frequently Asked Questions ">
+            <FAQContainer faqs={faqs} />
+          </HeadingPrimary>
+        </div>
+
         {/* </Container> */}
       </div>
     </div>

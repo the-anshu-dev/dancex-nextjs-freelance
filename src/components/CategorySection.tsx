@@ -11,6 +11,8 @@ export default function CategorySection({
   return (
     <Container>
       <div className="grid grid-cols-1 gap-8 px-2 md:grid-cols-4">
+      {/* <div className="grid grid-cols-1 p-2 md:grid-cols-4"> */}
+
         {categories.map((category, index) => (
           <CategoryCard key={index} item={category} />
         ))}

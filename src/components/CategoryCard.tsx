@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function CategoryCard({ item }: { item: ImageCardProps }) {
   return (
     <Link href={item.link || "/"}>
-      <div className="relative md:size-80 aspect-video w-full cursor-pointer overflow-hidden rounded-xl">
+      <div className="relative  aspect-video w-full cursor-pointer overflow-hidden rounded-xl">
         <Image
           src={item.img}
           alt={item.title}

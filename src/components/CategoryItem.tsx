@@ -10,10 +10,10 @@ export default function CategoryItem({ category }: { category: Category }) {
   return (
     <Link
       href={category.link}
-      className="flex items-center justify-center gap-2"
+      className="flex items-center justify-center gap-2 "
     >
       <div
-        className={`w-8 rounded-md p-1 ${
+        className={`w-8 md:w-10 rounded-md p-1 ${
           pathname === category.link
             ? "border-[1px] border-primary"
             : "group-first:border-[1px] group-first:border-primary"

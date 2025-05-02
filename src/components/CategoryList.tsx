@@ -8,7 +8,7 @@ export default function CategoryList({
 }) {
   return (
     <ul
-      className="flex w-full gap-4 overflow-x-auto overflow-y-hidden py-8 px-3  "
+      className="flex w-full gap-4 md:gap-12 overflow-x-auto overflow-y-hidden py-8 px-3  "
       style={{
         scrollbarWidth: "none",
         msOverflowStyle: "none",
