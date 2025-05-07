@@ -131,7 +131,7 @@ export default function ProfilePage() {
         </div>
       </div>
       <HeadingPrimary secondary="skills" primary="Skills">
-        <div className=" flex justify-between">
+        <div className=" flex justify-evenly">
           {profile.skills.map((skill, index) => (
             <div className="p-2" key={index}>
               <CategoryCard item={skill} />

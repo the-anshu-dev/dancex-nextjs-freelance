@@ -20,5 +20,7 @@ export default function CategoryCard({ item }: { item: ImageCardProps }) {
         </h3>
       </div>
     </Link>
+
+    
   );
 }
