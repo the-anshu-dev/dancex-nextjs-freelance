@@ -7,7 +7,7 @@ import {
   FiMoreHorizontal,
 } from "react-icons/fi";
 
-const DanceInterest: React.FC = () => {
+const DanceInterest = ({ state, setState, setIsNext }: any) => {
   const [selected, setSelected] = useState("");
   const [loading, setLoading] = useState(false);
   const options = [

@@ -7,15 +7,6 @@ import SocialDetails from './SocialDetails';
 import DanceInterest from './DanceInterest';
 
 
-
-
-
-
-
-
-
-
-
 const SignupMutiStepForm: React.FC = () => {
   const [current, setCurrent] = useState(0);
 const[isNext, setIsNext]=useState(false);
@@ -55,7 +46,7 @@ const steps = [
   },
   {
     title: 'Dance Interst',
-    content: <DanceInterest/>,
+    content: <DanceInterest  state={state} setState={setState}  setIsNext={setIsNext} />,
   },
 ];
 
