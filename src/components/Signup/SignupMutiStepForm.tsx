@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 'use client'
 import React, { useState } from 'react';
 import { Button, message, Steps, theme } from 'antd';
@@ -64,44 +72,73 @@ const steps = [
   };
 
   return (
-    <div className="p-6 bg-white rounded-2xl shadow-xl  mx-auto mt-10 transition-all duration-300">
+<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-200 to-purple-300 p-4 sm:p-6">
+  <div className="flex flex-col md:flex-row max-w-5xl w-full bg-white rounded-2xl shadow-xl overflow-hidden">
 
-       <div className=" flex flex-col gap-y-1 mb-5">
-             <h1 className="text-lg text-black">DanceX Registeration Form</h1>
-             <p className="text-[13px] text-black">Please fill out the required information to register</p>
-             </div>
+    {/* Left Info Panel */}
+    <div className="md:flex-1 bg-indigo-600 text-white flex flex-col justify-center p-8 sm:p-12 space-y-6 text-center md:text-left">
+      <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-indigo-400/70 mx-auto md:mx-0"></div>
 
-      <Steps
-        current={current}
-        items={items}
-        className="custom-steps"
-      />
-      <div style={contentStyle}>{steps[current].content}</div>
-      <div style={{ marginTop: 24, display:'flex', justifyContent:'flex-end'}}>
-      {current > 0 && (
-          <Button style={{ margin: '0 8px' }} onClick={() => prev()}>
+      <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+        DanceX Registration
+      </h3>
+      <p className="text-indigo-200 max-w-xs sm:max-w-sm mx-auto md:mx-0 text-sm sm:text-base">
+        Please fill out the steps to complete your registration.
+      </p>
+      <p className="text-indigo-300 text-xs sm:text-sm italic max-w-xs mx-auto md:mx-0">
+        Let’s get you started on your dance journey!
+      </p>
+    </div>
+
+    {/* Right Form Panel */}
+    <div className="md:flex-1 p-6 sm:p-10 flex flex-col justify-center max-w-md md:max-w-full mx-auto md:mx-0">
+      <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 text-center mb-6 sm:mb-8">
+        Signup
+      </h2>
+
+      <Steps current={current} items={items} className="mb-6 sm:mb-8" />
+
+      <div className="min-h-[260px]">{steps[current].content}</div>
+
+      <div className="mt-6 flex flex-col sm:flex-row justify-end gap-4">
+        {current > 0 && (
+          <Button
+            style={{ minWidth: 120 }}
+            onClick={prev}
+            className="w-full sm:w-auto"
+          >
             Previous
           </Button>
         )}
 
         {current < steps.length - 1 && (
-          <Button type="primary" disabled={!isNext} onClick={() => next()} className='bg-blue-600'>
+          <Button
+            type="primary"
+            disabled={!isNext}
+            onClick={next}
+            className="bg-indigo-600 hover:bg-indigo-700 w-full sm:w-auto"
+            style={{ minWidth: 120 }}
+          >
             Next
           </Button>
         )}
+
         {current === steps.length - 1 && (
-          <Button type="primary" onClick={() => message.success('Processing complete!')}>
+          <Button
+            type="primary"
+            onClick={() => message.success('Registration complete!')}
+            className="bg-indigo-600 hover:bg-indigo-700 w-full sm:w-auto"
+            style={{ minWidth: 120 }}
+          >
             Done
           </Button>
         )}
-        
       </div>
-      <style jsx>{`
-        .custom-steps .ant-steps-item-title {
-          color: red !important;
-        }
-      `}</style>
     </div>
+
+  </div>
+</div>
+
   );
 };
 
