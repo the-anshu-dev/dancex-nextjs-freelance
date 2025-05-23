@@ -42,18 +42,15 @@ const requests = {
 };
 
 const Default = {
-  login: (body: any) => requests.post(`webSignin`, body),
-  forgotPasswordOtpGenerate: (body: any) =>
-    requests.post(`forgot-password-otp`, body),
-  verifyForgotOtp: (body: any) => requests.post(`verify-forgot-otp`, body),
-  createNewPassword: (body: any) => requests.post(`create-new-password`, body),
-  changeAvatar: (uri: any) => requests.post(`upload-profile`, uri),
-  countAll: () => requests.get(`count-all`),
+  login: (body: any) => requests.post(`login`, body),
+  verifyOtp: (body: any) => requests.post(`verify_otp`, body),
+  registeration: (body: any) =>
+    requests.post(`user_registration`, body),
 };
-    
-  
+
+
 const danceXApi = {
-  
+
   Default,
   token,
   setToken: (_token?: string) => {

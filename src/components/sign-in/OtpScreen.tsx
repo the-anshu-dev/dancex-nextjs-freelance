@@ -4,7 +4,7 @@
 
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useRef, useState, useEffect } from 'react';
 
 export default function OtpScreen() {
@@ -12,6 +12,8 @@ export default function OtpScreen() {
   const [timer, setTimer] = useState(30);
   const inputs = useRef<(HTMLInputElement | null)[]>([]);
   const router = useRouter();
+    const searchParams = useSearchParams();
+
 
   useEffect(() => {
     if (timer === 0) return;
@@ -56,7 +58,7 @@ export default function OtpScreen() {
   };
 
   return (
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-200 to-indigo-300 p-4 sm:p-6">
+  <div className="min-h-screen flex items-center justify-center  p-4 sm:p-6">
   <div className="flex flex-col md:flex-row max-w-5xl w-full bg-white rounded-2xl shadow-xl overflow-hidden">
 
     {/* Left Card */}

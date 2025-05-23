@@ -23,7 +23,7 @@ const DanceInterest = ({ state, setState, setIsNext }: any) => {
   ];
 
   const handleChange = (value: string) => {
-    setSelected(value);
+    setState((prev:any)=>({...prev, dance_interest: value}));
   };
   const initializeDanceInterest = async () => {
     try {
@@ -42,18 +42,15 @@ const DanceInterest = ({ state, setState, setIsNext }: any) => {
   }, []);
 
   return (
-    <div className="mx-auto mt-10 max-w-lg rounded-2xl bg-white p-6 transition-all duration-300">
-      <h2 className="mb-6 text-center text-2xl font-bold text-gray-900">
-        Choose User Role Type
-      </h2>
-      <div className="flex flex-col gap-4">
+     <div className="grid grid-cols-2 gap-4">
+
         {options.map((option) => (
           <label
             key={option.value}
-            className={`flex transform cursor-pointer items-center gap-4 rounded-xl border-2 p-4 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg ${
-              selected === option.value
-                ? "border-transparent bg-gradient-to-r from-purple-500 to-indigo-500 font-semibold text-white"
-                : "border-gray-200 bg-gray-100 text-gray-800 hover:border-gray-300"
+            className={`flex items-center gap-4 p-4 border-2 rounded-xl cursor-pointer transition-all duration-300 ease-in-out shadow-md hover:shadow-lg transform hover:-translate-y-1 ${
+              state.dance_interest === option.value
+                ? 'bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold border-transparent'
+                : 'bg-gray-100 text-gray-800 border-gray-200 hover:border-gray-300'
             }`}
             onClick={() => handleChange(option.value)}
           >
@@ -62,7 +59,6 @@ const DanceInterest = ({ state, setState, setIsNext }: any) => {
           </label>
         ))}
       </div>
-    </div>
   );
 };
 

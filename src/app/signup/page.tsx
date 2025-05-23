@@ -5,11 +5,9 @@ import React from "react";
 
 const page = () => {
   return (
-      <div className="m-10">
-      <SignInScreen/>
-              <OtpScreen/>
-        <SignupMutiStepForm />
-      </div>
+    <div className=" ">
+      <SignInScreen />
+    </div>
   );
 };
 
